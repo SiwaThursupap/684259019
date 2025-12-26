@@ -1,5 +1,4 @@
-public class GPACalculator {
-    public static void main(String[] args) {
+void main(String[] args) {
        
         // 1. กำหนดข้อมูลรายวิชา (Input Data)
         // เกรด A 2 ตัว, B 3 ตัว
@@ -47,20 +46,19 @@ public class GPACalculator {
             totalCredits += creditPerSubject;
 
             // แสดงผลการคำนวณย่อย (Optional: เพื่อให้เห็นการทำงาน)
-            System.out.println("วิชาที่ " + (i + 1) + " (เกรด " + grade + "): ได้แต้ม " + currentPoints);
+            IO.println("วิชาที่ " + (i + 1) + " (เกรด " + grade + "): ได้แต้ม " + currentPoints);
         }
 
         // 3. คำนวณหาเกรดเฉลี่ยและแสดงผล (Output)
         if (totalCredits > 0) {
             double gpa = totalPoints / totalCredits;
            
-            System.out.println("-------------------------");
-            System.out.println("คะแนนรวมทั้งหมด: " + totalPoints);
-            System.out.println("หน่วยกิตรวม: " + totalCredits);
+            IO.println("-------------------------");
+            IO.println("คะแนนรวมทั้งหมด: " + totalPoints);
+            IO.println("หน่วยกิตรวม: " + totalCredits);
             // แสดงผลทศนิยม 2 ตำแหน่ง
             System.out.printf("เกรดเฉลี่ย (GPA) ของคุณคือ: %.2f%n", gpa);
         } else {
-            System.out.println("ไม่มีหน่วยกิตที่นำมาคำนวณได้");
+            IO.println("ไม่มีหน่วยกิตที่นำมาคำนวณได้");
         }
     }
-}
